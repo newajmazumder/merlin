@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Test - Working Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 50px;
+        }
+        .test {
+            margin: 30px 0;
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>✅ Logo Files Found and Working!</h1>
+
+    <div class="test">
+        <h2>Logo File: merlin-logo.svg</h2>
+        <p>Small icon logo (38x39px):</p>
+        <img src="merlin-logo.svg" alt="Merlin Icon" style="height: 39px; background: white; padding: 10px; border-radius: 5px;">
+        <p>If you see a logo above, the file is loading correctly!</p>
+    </div>
+
+    <div class="test">
+        <h2>Logo File: logo.svg</h2>
+        <p>Full "merlin" text logo (114x24px):</p>
+        <img src="logo.svg" alt="Merlin Text Logo" style="height: 50px; background: white; padding: 10px; border-radius: 5px;">
+        <p>If you see "merlin" text above, the file is loading correctly!</p>
+    </div>
+
+    <div class="test">
+        <h2>The Problem</h2>
+        <p>The main index.html file had these issues:</p>
+        <ul>
+            <li>❌ Absolute paths: <code>src="/merlin-logo.svg"</code></li>
+            <li>❌ SVG viewbox case: <code>viewbox</code> instead of <code>viewBox</code></li>
+            <li>❌ Opacity: <code>opacity:0</code> making it invisible</li>
+        </ul>
+    </div>
+
+    <div class="test">
+        <h2>✅ All Fixed!</h2>
+        <p>Both logo files exist and work. Open <strong>index_formatted.html</strong> now - all paths are fixed to relative paths.</p>
+    </div>
+
+    <script>
+        // Check if images loaded
+        window.addEventListener('load', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.complete || img.naturalHeight === 0) {
+                    img.style.border = '3px solid red';
+                    img.insertAdjacentHTML('afterend', '<p style="color:red">❌ Failed to load!</p>');
+                } else {
+                    img.style.border = '3px solid green';
+                    img.insertAdjacentHTML('afterend', '<p style="color:#4CAF50">✅ Loaded successfully!</p>');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

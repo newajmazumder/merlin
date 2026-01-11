@@ -1,0 +1,101 @@
+@import"https://fonts.googleapis.com/css2?family=Inter:wght@400;
+  500;
+  600;
+  700&family=Instrument+Serif&display=swap";
+  .inter-400 {
+  
+font-family:Inter,sans-serif;
+  font-optical-sizing:auto;
+  font-weight:400;
+  font-style:normal}
+:root {
+  
+font-size:62.5%}
+@media only screen and (max-width:62.5em) {
+  
+:root {
+  
+font-size:56.25%}
+}
+@media only screen and (max-width:56.25em) {
+  
+:root {
+  
+font-size:54%}
+}
+@media only screen and (max-width:37.5em) {
+  
+:root {
+  
+font-size:51%}
+}
+@media only screen and (min-width:112.5em) {
+  
+:root {
+  
+font-size:75%}
+}
+* {
+  
+margin:0;
+  padding:0;
+  box-sizing:border-box}
+::selection {
+  
+background-color:#94d8ff;
+  color:#fff}
+body,html {
+  
+background-color:#f7f7f7}
+body {
+  
+font-family:Inter,sans-serif;
+  font-size:1.6rem;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  scroll-behavior:smooth}
+html.lenis,html.lenis body {
+  
+height:auto}
+.lenis.lenis-smooth {
+  
+scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  
+overscroll-behavior:contain}
+.lenis.lenis-stopped {
+  
+overflow:hidden}
+.lenis.lenis-smooth iframe {
+  
+pointer-events:none}
+.layout {
+  
+display:grid;
+  grid-template-columns:1fr repeat(12,minmax(min-content,10rem)) 1fr;
+  position:relative;
+  z-index:1}
+@media only screen and (max-width:56.25em) {
+  
+.layout {
+  
+display:block}
+}
+.layout__item {
+  
+grid-column:2/14;
+  padding-inline:2rem}
+.layout__item__manifesto {
+  
+grid-column:4/12;
+  padding-inline:2rem}
+.checkmark-path {
+  
+stroke-dasharray:70;
+  stroke-dashoffset:70;
+  animation:draw-check .7s ease .3s forwards}
+@keyframes draw-check {
+  
+to {
+  stroke-dashoffset:0}
+}
