@@ -34,7 +34,7 @@ export default function ReviewQuote() {
         <span id="react-review-headline" />
       </p>
       <div id="react-review-divider" />
-      <div className="m-6d731127 mantine-Stack-root" style={authorStackStyle}>
+      <div className="m-6d731127 mantine-Stack-root review-author" style={authorStackStyle}>
         <div id="react-review-author" />
       </div>
     </div>
