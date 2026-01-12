@@ -1,10 +1,13 @@
 import type { CSSProperties } from 'react'
-import reviewDividerHtml from '../legacy/review-divider.html?raw'
 
-const wrapperStyle: CSSProperties = {
-  display: 'contents',
+const dividerStyle: CSSProperties = {
+  marginInline: 'auto',
+  marginTop: 'calc(2rem * var(--mantine-scale))',
+  width: 'calc(30rem * var(--mantine-scale))',
 }
 
 export default function ReviewDivider() {
-  return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: reviewDividerHtml }} />
+  return (
+    <div className="m-3eebeb36 mantine-Divider-root" data-orientation="horizontal" role="separator" style={dividerStyle} />
+  )
 }

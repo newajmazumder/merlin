@@ -1,10 +1,3 @@
-import type { CSSProperties } from 'react'
-import heroDescriptionHtml from '../legacy/hero-description.html?raw'
-
-const wrapperStyle: CSSProperties = {
-  display: 'contents',
-}
-
 export default function HeroDescription() {
-  return <span style={wrapperStyle} dangerouslySetInnerHTML={{ __html: heroDescriptionHtml }} />
+  return <>Merlin finds your highest-impact priorities from your inbox and calendar, then helps you complete them with a single click.</>
 }

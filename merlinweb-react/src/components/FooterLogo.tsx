@@ -1,10 +1,19 @@
 import type { CSSProperties } from 'react'
-import footerLogoHtml from '../legacy/footer-logo.html?raw'
 
 const wrapperStyle: CSSProperties = {
-  display: 'contents',
+  position: 'relative',
+  display: 'block',
+}
+
+const logoStyle: CSSProperties = {
+  width: '100%',
+  marginTop: '4rem',
 }
 
 export default function FooterLogo() {
-  return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: footerLogoHtml }} />
+  return (
+    <div style={wrapperStyle}>
+      <img alt="merlin logo" src="logo.svg" style={logoStyle} />
+    </div>
+  )
 }

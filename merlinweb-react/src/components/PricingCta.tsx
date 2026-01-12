@@ -1,10 +1,7 @@
-import type { CSSProperties } from 'react'
-import pricingCtaHtml from '../legacy/pricing-cta.html?raw'
-
 export default function PricingCta() {
-  const wrapperStyle: CSSProperties = {
-    display: 'contents',
-  }
-
-  return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: pricingCtaHtml }} />
+  return (
+    <div className="m-4451eb3a mantine-Center-root">
+      <div id="react-pricing-cta-button" />
+    </div>
+  )
 }

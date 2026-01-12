@@ -1,10 +1,11 @@
-import type { CSSProperties } from 'react'
-import pricingCardsHtml from '../legacy/pricing-cards.html?raw'
+import PricingCardMerlin from './PricingCardMerlin'
+import PricingCardTraditional from './PricingCardTraditional'
 
 export default function PricingCards() {
-  const wrapperStyle: CSSProperties = {
-    display: 'contents',
-  }
-
-  return <div style={wrapperStyle} dangerouslySetInnerHTML={{ __html: pricingCardsHtml }} />
+  return (
+    <>
+      <PricingCardMerlin />
+      <PricingCardTraditional />
+    </>
+  )
 }
